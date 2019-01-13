@@ -1,0 +1,118 @@
+import java.util.Scanner;
+//Caique Otávio
+public class Teste {
+	public static void main(String[] args) {
+		int opcao = 0;
+		//Manhã
+		int ovos = 0, torrada = 0, cafe = 0;
+		//Noite
+		int bife = 0, batata = 0, vinho = 0, bolo = 0;
+		
+		System.out.println("Digite o horario do dia:");
+		System.out.println("1. Manha");
+		System.out.println("2. Noite");
+		Scanner input = new Scanner(System.in);
+		opcao = input.nextInt();
+
+		if (opcao > 2) {
+			System.out.println("Escolha apenas uma das opções mostradas.");
+		}
+
+		if (opcao == 1) {
+			
+			//Ovos
+			System.out.println("Digite a quantidade de Entrada que deseja:");
+			ovos = input.nextInt();
+			
+			//Torrada
+			System.out.println("Digite a quantidade de Acompanhamento que deseja:");
+			torrada = input.nextInt();
+			
+			//Café
+			System.out.println("Digite a quantidade de Bebida que deseja:");
+			cafe = input.nextInt();
+			//Sobremesa
+			System.out.println("Pela manhã não oferecemos Sobremesa.\n");
+			
+			//Resultado
+			System.out.println("Essa é a sua Refeição:\n");
+			
+			//Resultado Ovos
+			if (ovos > 0 && ovos < 2) {
+				System.out.println("Ovos: " + ovos);
+			} 
+			else if (ovos == 0) {}//Não aparece
+			else {
+				System.out.println("Você não pode pedir mais de 1 Entrada.");
+			}
+			
+			//Resultado Torrada
+			if (torrada > 0 && torrada < 2) {
+				System.out.println("Torrada: " + torrada);
+			} 
+			else if (torrada == 0) {}//Não aparece
+			else {
+				System.out.println("Você não pode pedir mais de 1 Acompanhamento.");
+			}
+			
+			//Resultado Café
+			if(cafe > 0) {
+				System.out.println("Café: " + cafe);
+			}
+		}
+
+		if (opcao == 2) {
+
+			//Bife
+			System.out.println("Digite a quantidade de Entrada que deseja:");
+			bife = input.nextInt();
+			
+			//Batata
+			System.out.println("Digite a quantidade de Acompanhamento que deseja:");
+			batata = input.nextInt();
+			
+			//Vinho
+			System.out.println("Digite a quantidade de Bebida que deseja:");
+			vinho = input.nextInt();
+			
+			//Bolo
+			System.out.println("Digite a quantidade de Sobremesa que deseja:");
+			bolo = input.nextInt();
+			
+			//Resultado
+			System.out.println("Essa é a sua Refeição:\n");
+			
+			//Resultado Bife
+			if (bife > 0 && bife < 2) {
+				System.out.println("Bife: " + bife);
+			} 
+			else if (bife == 0) {}//Não aparece
+			else {
+				System.out.println("Você não pode pedir mais de 1 Entrada.");
+			}
+			
+			//Resultado Batata
+			if(batata > 0) {
+				System.out.println("Batata: " + batata);
+			}
+			
+			//Resultado Vinho
+			if (vinho > 0 && vinho < 2) {
+				System.out.println("Vinho: " + vinho);
+			} 
+			else if (vinho == 0) {}//Não aparece
+			else {
+				System.out.println("Você não pode pedir mais de 1 Bebida.");
+			}
+			
+			//Resultado Bolo
+			if (bolo > 0 && bolo < 2) {
+				System.out.println("Torrada: " + bolo);
+			} 
+			else if (bolo == 0) {}//Não aparece
+			else {
+				System.out.println("Você não pode pedir mais de 1 Sobremesa.");
+			}
+		}
+	}
+}
