@@ -1,6 +1,7 @@
-import java.util.Scanner;
 //Caique Otávio
-public class Teste {
+import java.util.Scanner;
+
+public class APP_GFT {
 	public static void main(String[] args) {
 		int opcao = 0;
 		//Manhã
@@ -31,6 +32,7 @@ public class Teste {
 			//Café
 			System.out.println("Digite a quantidade de Bebida que deseja:");
 			cafe = input.nextInt();
+			
 			//Sobremesa
 			System.out.println("Pela manhã não oferecemos Sobremesa.\n");
 			
@@ -107,7 +109,7 @@ public class Teste {
 			
 			//Resultado Bolo
 			if (bolo > 0 && bolo < 2) {
-				System.out.println("Torrada: " + bolo);
+				System.out.println("Bolo: " + bolo);
 			} 
 			else if (bolo == 0) {}//Não aparece
 			else {
