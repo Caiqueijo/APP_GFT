@@ -1,120 +1,127 @@
 //Caique Otávio Rodrigues dos Santos
 import java.util.Scanner;
 
-public class APP_GFT {
+public class Restaurant Order App - GFT {
 	public static void main(String[] args) {
 		int opcao = 0;
-		//Manhã
+		// Manhã
 		int ovos = 0, torrada = 0, cafe = 0;
-		//Noite
+		// Noite
 		int bife = 0, batata = 0, vinho = 0, bolo = 0;
-		
-		System.out.println("Digite o horario do dia:");
+
+		System.out.println("Digite o número referente ao horario do dia:");
 		System.out.println("1. Manha");
 		System.out.println("2. Noite");
 		Scanner input = new Scanner(System.in);
 		opcao = input.nextInt();
 
-		if (opcao > 2) {
-			System.out.println("Escolha apenas uma das opções mostradas.");
+		while (opcao < 1 || opcao > 2) {
+			System.out.println("Por Favor, digite apenas uma das opções mostradas.");
+			Scanner input1 = new Scanner(System.in);
+			opcao = input1.nextInt();
 		}
 
+		// Inicio Manha
 		if (opcao == 1) {
-			
-			//Ovos
+
+			// Ovos
 			System.out.println("Digite a quantidade de Entrada que deseja:");
 			ovos = input.nextInt();
-			
-			//Torrada
+
+			// Torrada
 			System.out.println("Digite a quantidade de Acompanhamento que deseja:");
 			torrada = input.nextInt();
-			
-			//Café
+
+			// Café
 			System.out.println("Digite a quantidade de Bebida que deseja:");
 			cafe = input.nextInt();
-			
-			//Sobremesa
+
+			// Sobremesa
 			System.out.println("Pela manhã não oferecemos Sobremesa.\n");
-			
-			//Resultado
+
+			// Resultado
 			System.out.println("Essa é a sua Refeição:\n");
-			
-			//Resultado Ovos
+
+			// Resultado Ovos
 			if (ovos > 0 && ovos < 2) {
 				System.out.println("Ovos: " + ovos);
 			} 
-			else if (ovos == 0) {}//Não aparece
+			else if (ovos == 0) {} // Não aparece
 			else {
 				System.out.println("Você não pode pedir mais de 1 Entrada.");
 			}
-			
-			//Resultado Torrada
+
+			// Resultado Torrada
 			if (torrada > 0 && torrada < 2) {
 				System.out.println("Torrada: " + torrada);
 			} 
-			else if (torrada == 0) {}//Não aparece
+			else if (torrada == 0) {} // Não aparece
 			else {
 				System.out.println("Você não pode pedir mais de 1 Acompanhamento.");
 			}
-			
-			//Resultado Café
-			if(cafe > 0) {
+
+			// Resultado Café
+			if (cafe > 0) {
 				System.out.println("Café: " + cafe);
 			}
+			System.out.println("Sobremesa: "+ "Indisponivel");
 		}
+		// Final Manha
 
+		// Inicio Noite
 		if (opcao == 2) {
 
-			//Bife
+			// Bife
 			System.out.println("Digite a quantidade de Entrada que deseja:");
 			bife = input.nextInt();
-			
-			//Batata
+
+			// Batata
 			System.out.println("Digite a quantidade de Acompanhamento que deseja:");
 			batata = input.nextInt();
-			
-			//Vinho
+
+			// Vinho
 			System.out.println("Digite a quantidade de Bebida que deseja:");
 			vinho = input.nextInt();
-			
-			//Bolo
+
+			// Bolo
 			System.out.println("Digite a quantidade de Sobremesa que deseja:");
 			bolo = input.nextInt();
-			
-			//Resultado
+
+			// Resultado
 			System.out.println("Essa é a sua Refeição:\n");
-			
-			//Resultado Bife
+
+			// Resultado Bife
 			if (bife > 0 && bife < 2) {
 				System.out.println("Bife: " + bife);
 			} 
-			else if (bife == 0) {}//Não aparece
+			else if (bife == 0) {} // Não aparece
 			else {
 				System.out.println("Você não pode pedir mais de 1 Entrada.");
 			}
-			
-			//Resultado Batata
-			if(batata > 0) {
+
+			// Resultado Batata
+			if (batata > 0) {
 				System.out.println("Batata: " + batata);
 			}
-			
-			//Resultado Vinho
+
+			// Resultado Vinho
 			if (vinho > 0 && vinho < 2) {
 				System.out.println("Vinho: " + vinho);
 			} 
-			else if (vinho == 0) {}//Não aparece
+			else if (vinho == 0) {} // Não aparece
 			else {
 				System.out.println("Você não pode pedir mais de 1 Bebida.");
 			}
-			
-			//Resultado Bolo
+
+			// Resultado Bolo
 			if (bolo > 0 && bolo < 2) {
 				System.out.println("Bolo: " + bolo);
 			} 
-			else if (bolo == 0) {}//Não aparece
+			else if (bolo == 0) {} // Não aparece
 			else {
 				System.out.println("Você não pode pedir mais de 1 Sobremesa.");
 			}
 		}
+		// Final Noite
 	}
 }
